@@ -1,6 +1,16 @@
 <!--pages/main/index.wxml-->
 <!-- <text>pages/main/index.wxml</text> -->
-<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<van-search model:value="{{ value }}" placeholder="请输入搜索关键词" bind:change="searchChange"/>
 <van-tabs active="{{ active }}" bind:change="onChange">
   <van-tab wx:for="{{tagList}}" title="{{item.name}}" wx:key="index"></van-tab>
 </van-tabs>
+
+<van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
+  <view slot="left">选择</view>
+  <van-cell-group>
+    <van-cell title="单元格" value="内容" />
+  </van-cell-group>
+  <view slot="right">删除</view>
+</van-swipe-cell>
+
+
