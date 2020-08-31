@@ -1,0 +1,6 @@
+<!--pages/main/index.wxml-->
+<!-- <text>pages/main/index.wxml</text> -->
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab wx:for="{{tagList}}" title="{{item.name}}" wx:key="index"></van-tab>
+</van-tabs>

@@ -1,0 +1,12 @@
+<!--pages/login/index.wxml-->
+<view class='main-wrapper' style='margin-bottom:{{tabbarHeight}}px;'>
+ <main wx:if='{{activeIndex == 0}}' onShow="{{tabbar[0].selected}}"></main>
+ <my-page wx:if='{{activeIndex == 1}}' onShow="{{tabbar[1].selected}}"></my-page>
+ <my-edit wx:if='{{activeIndex == 2}}' onShow="{{tabbar[2].selected}}"></my-edit>
+ <my-dtl wx:if='{{activeIndex == 3}}' onShow="{{tabbar[3].selected}}"></my-dtl>
+</view>
+<van-tabbar active="{{ activeIndex }}" bind:change="onChange">
+  <van-tabbar-item wx:for="{{tabbar}}" wx:key="index" icon="{{item.iconPath}}" >
+   {{item.name}}
+  </van-tabbar-item>
+</van-tabbar>

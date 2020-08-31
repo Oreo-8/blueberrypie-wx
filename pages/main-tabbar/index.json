@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "main": "../main/index",
+    "my-page": "../my-page/index",
+    "my-edit": "../my-edit/index",
+    "my-dtl": "../my-dtl/index"
+  }
+}
